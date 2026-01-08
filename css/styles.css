@@ -1,0 +1,46 @@
+/* #region Reset */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* #endregion */
+
+/* #region Common */
+body {
+  height: 100vh;
+}
+/* #endregion */
+
+/* #region Container */
+.container {
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 24px;
+}
+/* #endregion */
+
+/* #region Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-item {
+  flex: 1 1 360px;
+  height: 200px;
+}
+
+.gallery-image {
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+/* #endregion */

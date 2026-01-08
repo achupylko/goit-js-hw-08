@@ -85,3 +85,19 @@ const createGalleryMarkup = images =>
 const gallery = document.querySelector('.gallery');
 
 gallery.innerHTML = createGalleryMarkup(images);
+
+gallery.addEventListener('click', selectPicture);
+
+function selectPicture(event) {
+  if (event.target.nodeName !== 'IMG') {
+    return;
+  }
+
+  event.preventDefault();
+
+  const selectedPictureUrl = event.target.dataset.source;
+  const instance = basicLightbox.create(`
+    <img src="${selectedPictureUrl}" width="800" height="600">
+  `);
+  instance.show();
+}
